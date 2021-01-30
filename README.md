@@ -28,11 +28,13 @@
 
  
 
-**strategyETHAlpha:**[0x17DBC753Cc51beBcd7dFb4CAAFc91129285dC975](https://etherscan.io/address/0x17DBC753Cc51beBcd7dFb4CAAFc91129285dC975)
+**strategyETHCurve:**[0xAeb39E44aEe822CF4443dEb92159a710Ef50A55E](https://etherscan.io/address/0xAeb39E44aEe822CF4443dEb92159a710Ef50A55E)
 
-**strategyPickleWBTC:**[0xEa135c1c267124107F448f454Ad33f24FF521702](https://etherscan.io/address/0xEa135c1c267124107F448f454Ad33f24FF521702)
+**strategyWBTCCurve:**[0xfD4626e618e3619d36B7Ed016e6e51a40522B34D](https://etherscan.io/address/0xfD4626e618e3619d36B7Ed016e6e51a40522B34D)
 
-**strategyPickleUSDC:**[0x15bA709f87DA04B6140892B3bAEc8F710cdF67d8](https://etherscan.io/address/0x15bA709f87DA04B6140892B3bAEc8F710cdF67d8)
+**strategyUSDCCurve:**[0x8934C0D78c4aAb5563ACaf99e5a4e64Fdba8a9Fe](https://etherscan.io/address/0x8934C0D78c4aAb5563ACaf99e5a4e64Fdba8a9Fe)
+
+**strategyUSDTCurve:**[0x7865Ee2a9fc0e94fbcae1Dff3f75604300802945](https://etherscan.io/address/0x7865Ee2a9fc0e94fbcae1Dff3f75604300802945)
 
 **strategyPickle3Crv:**[0x70b2FD1F90f8396cDB8e1e513b34b34337B7438D](https://etherscan.io/address/0x70b2FD1F90f8396cDB8e1e513b34b34337B7438D)
 
