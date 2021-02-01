@@ -40,6 +40,12 @@
 
 **strategyPickleCRVRenBTC:**[0x941BA82720D4Cf9bb6412ffDB8e6d10a46B669BB](https://etherscan.io/address/0x941BA82720D4Cf9bb6412ffDB8e6d10a46B669BB)
 
+**strategyWBTCSLPPickle:**[0x0B736c73568C39B705F4532bca22df0c81D71886](https://etherscan.io/address/0x0B736c73568C39B705F4532bca22df0c81D71886)
+
+**strategyUSDCSLPPickle:**[0x9D35B17228964e288ad2535628C2745C53A1E3bc](https://etherscan.io/address/0x9D35B17228964e288ad2535628C2745C53A1E3bc)
+
+**strategyUSDTSLPPickle:**[0x41ea87a6a31B37335d98B6c1BdBAb6FF978D16B8](https://etherscan.io/address/0x41ea87a6a31B37335d98B6c1BdBAb6FF978D16B8)
+
  
 
 ***Security is our first priority,Most of our code comes from YFI and Uniswap,audit still pending With PeckShield,the report will come out in January,We will set timelock and multi-sig DAO later.***
