@@ -117,6 +117,7 @@ library SafeERC20 {
 interface Strategy {
     function want() external view returns (address);
     function deposit() external;
+    function withdraw(address) external;
     function withdraw(uint) external;
     function withdrawAll() external returns (uint);
     function balanceOf() external view returns (uint);
@@ -124,6 +125,34 @@ interface Strategy {
 
 interface Converter {
     function convert(address) external returns (uint);
+}
+
+interface OneSplitAudit {
+    function swap(
+        address fromToken,
+        address destToken,
+        uint256 amount,
+        uint256 minReturn,
+        uint256[] calldata distribution,
+        uint256 flags
+    )
+        external
+        payable
+        returns(uint256 returnAmount);
+    
+    function getExpectedReturn(
+        address fromToken,
+        address destToken,
+        uint256 amount,
+        uint256 parts,
+        uint256 flags // See constants in IOneSplit.sol
+    )
+        external
+        view
+        returns(
+            uint256 returnAmount,
+            uint256[] memory distribution
+        );
 }
 
 contract Controller {
@@ -161,7 +190,7 @@ contract Controller {
     }
     
     function setVault(address _token, address _vault) public {
-        require(msg.sender == governance, "!governance");
+        require(msg.sender == timelock, "!timelock");
         vaults[_token] = _vault;
     }
     
@@ -174,7 +203,9 @@ contract Controller {
         require(msg.sender == timelock, "!timelock");
         address _current = strategies[_token];
         if (_current != address(0)) {
-           Strategy(_current).withdrawAll();
+            if(Strategy(_current).balanceOf() > 0){
+                Strategy(_current).withdrawAll();
+            }
         }
         strategies[_token] = _strategy;
     }
