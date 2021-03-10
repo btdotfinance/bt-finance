@@ -266,8 +266,9 @@ contract StrategyWBTCCurve {
 	function withdrawAll() external onlyController returns (uint balance) {
         bool withdrawSlipTemp = withdrawSlipCheck;
         withdrawSlipCheck = false;
-		balance = _withdraw(balanceOf());
+		_withdraw(balanceOf());
         withdrawSlipCheck = withdrawSlipTemp;
+        balance = IERC20(want).balanceOf(address(this));
 
 		address _vault = Controller(controller).vaults(address(want));
         require(_vault != address(0), "!vault");
